@@ -1,0 +1,23 @@
+{% extends 'base.html '%}
+
+{% block title %}
+  Все рецепты
+{% endblock %}
+
+{% block content %}
+  <h1>Все рецепты</h1>
+
+  <div class="recipes-grid">
+      {% for recipe in recipes %}
+            <div class="recipe-card">
+                <img src="https://via.placeholder.com/400x300" alt="img" class="recipe-image">
+                <div class="recipe-content">
+                    <h2 class="recipe-title">{{ recipe.title }}</h2>
+                    <p class="recipe-excerpt">{{ recipe.title }}</p>
+                    <a href="#" class="view-recipe">Читать полностью</a>
+                </div>
+            </div>
+      {% endfor %}
+  </div>
+
+{% endblock %}
